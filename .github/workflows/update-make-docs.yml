@@ -17,7 +17,7 @@ jobs:
       contents: write  # Needed for creating commits or PRs
       pull-requests: write  # Needed if the action creates PRs
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+      - uses: actions/checkout@v6.0.2 # v4
         with:
           persist-credentials: 'false'
-      - uses: grafana/writers-toolkit/update-make-docs@f65819d6a412b752c0e0263375215f049507b0e6 # update-make-docs/v1
+      - uses: grafana/writers-toolkit/update-make-docs@vale/v1.0.0 # update-make-docs/v1

@@ -24,11 +24,11 @@ jobs:
       matrix:
         go: [ '1.24' ]
     steps:
-      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
+      - uses: actions/checkout@v6.0.2 # v3
         with:
           persist-credentials: false
       - name: Set up Go
-        uses: actions/setup-go@be3c94b385c4f180051c996d336f57a34c397495 # v3
+        uses: actions/setup-go@v6.4.0 # v3
         with:
           cache: false  # Disable caching to avoid extraction conflicts
           go-version: ${{ matrix.go }}
@@ -42,7 +42,7 @@ jobs:
           repo_secrets: |
             CODECOV_TOKEN=codecov:token
       - name: Report coverage
-        uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238 # v4
+        uses: codecov/codecov-action@v6.0.0 # v4
         continue-on-error: true
         with:
           file: ./testoutput/cover.txt
